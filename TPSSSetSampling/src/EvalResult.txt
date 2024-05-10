@@ -1,0 +1,83 @@
+Computation costs of basic operations
+
+Encryption              Addition     Scalar Product     multiplication  decryption
+ePSS: 0.014655666999999999    0.002084291  9.70666E-4   0.19952625000000002       0.002146041
+Paillier: 2.7190023329999997      0.016200792  0.180771125  17.941099541              2.604748542
+
+
+ePSS: 0.014655666999999999      0.002084291   9.70666E-4      0.19952625000000002     0.002146041
+TPSS: 0.014655666999999999      0.00552725    0.003588459     0.039953291999999994    0.002146041
+ePSS without noise  0                         0             0               0.008398959             0
+
+
+
+1. Computational Cost of Encryption:
+timeASE:0.014655666999999999
+timeTPSS:0.014655666999999999
+timePaillier:2.7190023329999997
+
+2. Computational Cost of Addition:
+timeASE:0.002084291
+timeTPSS:0.00552725
+timePaillier:0.016200792
+
+3. Computational Cost of Scalar Product:
+timeASE:9.70666E-4
+timeTPSS:0.003588459
+timePaillier:0.180771125
+
+4. Computational Cost of multiplication:
+timeASE:0.19952625000000002
+timeASEWithoutNoise:0.008398959
+timeTPSS:0.039953291999999994
+timePaillier:17.941099541
+
+5. Computational Cost of decryption:
+timeASE:0.002146041
+timeTPSS:0.002146041
+timePaillier:2.604748542
+
+
+Communication Overhead
+
+Share data 
+addition
+scalar product
+multiplication
+decryption
+
+ePSS and Paillier: 
+
+CipherTextSize  Communication in Mul  Communication in Recover
+
+eTPSS: 192  	384		128 
+TPSS: 384 		192		64
+Paillier: 2048 	6144   	0
+
+
+Outsourcing time with N
+n = 20000;Outsourcing time is 504.34 ms, Size of tree is 9.617146134376526 MB
+n = 30000;Outsourcing time is 786.6 ms, Size of tree is 16.90731370449066 MB
+n = 40000;Outsourcing time is 1226.98 ms, Size of tree is 25.275895476341248 MB
+n = 50000;Outsourcing time is 1512.7 ms, Size of tree is 29.6992746591568 MB
+n = 60000;Outsourcing time is 1729.4 ms, Size of tree is 34.40783393383026 MB
+
+Outsourcing time with beta
+beta = 16;Outsourcing time is802.86 ms, Size of tree is 16.90731370449066 MB
+beta = 19;Outsourcing time is791.18 ms, Size of tree is 17.060366988182068 MB
+beta = 22;Outsourcing time is834.0 ms, Size of tree is 17.213420271873474 MB
+beta = 25;Outsourcing time is880.54 ms, Size of tree is 17.36647355556488 MB
+beta = 28;Outsourcing time is934.4 ms, Size of tree is 17.519526839256287 MB
+
+Query encryption time with beta
+beta = 16; Query encryption time is 0.02 ms, Size of tree is 768.0 B
+beta = 19; Query encryption time is 0.021 ms, Size of tree is 912.0 B
+beta = 22; Query encryption time is 0.024 ms, Size of tree is 1056.0 B
+beta = 25; Query encryption time is 0.029 ms, Size of tree is 1200.0 B
+beta = 28; Query encryption time is 0.03 ms, Size of tree is 1344.0 B
+
+
+
+
+
+

@@ -1,0 +1,182 @@
+Computation costs of basic operations
+
+Encryption              Addition     Scalar Product     multiplication  decryption
+ePSS: 0.014655666999999999    0.002084291  9.70666E-4   0.19952625000000002       0.002146041
+Paillier: 2.7190023329999997      0.016200792  0.180771125  17.941099541              2.604748542
+
+
+ePSS: 0.014655666999999999      0.002084291   9.70666E-4      0.19952625000000002     0.002146041
+TPSS: 0.014655666999999999      0.00552725    0.003588459     0.039953291999999994    0.002146041
+ePSS without noise  0                         0             0               0.008398959             0
+
+
+
+1. Computational Cost of Encryption:
+timeASE:0.014655666999999999
+timeTPSS:0.014655666999999999
+timePaillier:2.7190023329999997
+
+2. Computational Cost of Addition:
+timeASE:0.002084291
+timeTPSS:0.00552725
+timePaillier:0.016200792
+
+3. Computational Cost of Scalar Product:
+timeASE:9.70666E-4
+timeTPSS:0.003588459
+timePaillier:0.180771125
+
+4. Computational Cost of multiplication:
+timeASE:0.19952625000000002
+timeASEWithoutNoise:0.008398959
+timeTPSS:0.039953291999999994
+timePaillier:17.941099541
+
+5. Computational Cost of decryption:
+timeASE:0.002146041
+timeTPSS:0.002146041
+timePaillier:2.604748542
+
+
+Communication Overhead
+
+Share data 
+addition
+scalar product
+multiplication
+decryption
+
+ePSS and Paillier: 
+
+CipherTextSize  Communication in Mul  Communication in Recover
+
+eTPSS: 192  	384		128 
+TPSS: 384 		192		64
+Paillier: 2048 	6144   	0
+
+
+Outsourcing time with N
+n = 20000;Outsourcing time is 504.34 ms, Size of tree is 9.617146134376526 MB
+n = 30000;Outsourcing time is 786.6 ms, Size of tree is 16.90731370449066 MB
+n = 40000;Outsourcing time is 1226.98 ms, Size of tree is 25.275895476341248 MB
+n = 50000;Outsourcing time is 1512.7 ms, Size of tree is 29.6992746591568 MB
+n = 60000;Outsourcing time is 1729.4 ms, Size of tree is 34.40783393383026 MB
+
+Outsourcing time with beta
+beta = 16;Outsourcing time is802.86 ms, Size of tree is 16.90731370449066 MB
+beta = 19;Outsourcing time is791.18 ms, Size of tree is 17.060366988182068 MB
+beta = 22;Outsourcing time is834.0 ms, Size of tree is 17.213420271873474 MB
+beta = 25;Outsourcing time is880.54 ms, Size of tree is 17.36647355556488 MB
+beta = 28;Outsourcing time is934.4 ms, Size of tree is 17.519526839256287 MB
+
+Query encryption time with beta
+beta = 16; Query encryption time is 0.02 ms, Size of tree is 768.0 B
+beta = 19; Query encryption time is 0.021 ms, Size of tree is 912.0 B
+beta = 22; Query encryption time is 0.024 ms, Size of tree is 1056.0 B
+beta = 25; Query encryption time is 0.029 ms, Size of tree is 1200.0 B
+beta = 28; Query encryption time is 0.03 ms, Size of tree is 1344.0 B
+
+
+Query processing with N
+n = 20000;Query Processing time is 2293.9 ms, Communication overhead is 51.285972595214844 MB
+n = 30000;Query Processing time is 3613.5 ms, Communication overhead is 86.75454711914062 MB
+n = 40000;Query Processing time is 5418.2 ms, Communication overhead is 131.16624450683594 MB
+n = 50000;Query Processing time is 6299.1 ms, Communication overhead is 152.69422149658203 MB
+n = 60000;Query Processing time is 7585.8 ms, Communication overhead is 183.72393035888672 MB
+Query processing with beta
+beta = 16;Query Processing time is 3606.8 ms, Communication overhead is 86.75454711914062 MB
+beta = 19;Query Processing time is 4217.9 ms, Communication overhead is 102.29306030273438 MB
+beta = 22;Query Processing time is 4974.9 ms, Communication overhead is 117.83157348632812 MB
+beta = 25;Query Processing time is 5697.4 ms, Communication overhead is 133.37008666992188 MB
+beta = 28;Query Processing time is 6343.0 ms, Communication overhead is 148.90859985351562 MB
+Query processing with range
+range = 200;Query Processing time is 3916.6 ms, Communication overhead is 92.14128112792969 MB
+range = 400;Query Processing time is 3668.2 ms, Communication overhead is 86.65608215332031 MB
+range = 600;Query Processing time is 3698.8 ms, Communication overhead is 86.77519226074219 MB
+range = 800;Query Processing time is 3279.3 ms, Communication overhead is 76.77763366699219 MB
+range = 1000;Query Processing time is 2853.9 ms, Communication overhead is 66.48974609375 MB
+
+
+
+ASE
+
+Outsourcing time with N
+n = 20000;Outsourcing time is 504.32 ms, Size of tree is 9.617146134376526 MB
+n = 30000;Outsourcing time is 727.4 ms, Size of tree is 16.90731370449066 MB
+n = 40000;Outsourcing time is 1244.34 ms, Size of tree is 25.275895476341248 MB
+n = 50000;Outsourcing time is 1462.8 ms, Size of tree is 29.6992746591568 MB
+n = 60000;Outsourcing time is 1760.6 ms, Size of tree is 34.40783393383026 MB
+Outsourcing time with beta
+beta = 16;Outsourcing time is843.24 ms, Size of tree is 16.90731370449066 MB
+beta = 19;Outsourcing time is895.94 ms, Size of tree is 17.060366988182068 MB
+beta = 22;Outsourcing time is968.12 ms, Size of tree is 17.213420271873474 MB
+beta = 25;Outsourcing time is1037.82 ms, Size of tree is 17.36647355556488 MB
+beta = 28;Outsourcing time is1098.92 ms, Size of tree is 17.519526839256287 MB
+Query encryption time with beta
+beta = 16; Query encryption time is 0.027 ms, Size of tree is 768.0 B
+beta = 19; Query encryption time is 0.077 ms, Size of tree is 912.0 B
+beta = 22; Query encryption time is 0.028 ms, Size of tree is 1056.0 B
+beta = 25; Query encryption time is 0.033 ms, Size of tree is 1200.0 B
+beta = 28; Query encryption time is 0.037 ms, Size of tree is 1344.0 B
+Query processing with N
+n = 20000;Query Processing time is 2286.3 ms, Communication overhead is 51.28092956542969 MB
+n = 30000;Query Processing time is 3667.5 ms, Communication overhead is 86.73806762695312 MB
+n = 40000;Query Processing time is 5541.7 ms, Communication overhead is 131.1308822631836 MB
+n = 50000;Query Processing time is 6463.5 ms, Communication overhead is 152.6686019897461 MB
+n = 60000;Query Processing time is 7885.1 ms, Communication overhead is 183.68157196044922 MB
+Query processing with beta
+beta = 16;Query Processing time is 3769.8 ms, Communication overhead is 86.73806762695312 MB
+beta = 19;Query Processing time is 4540.0 ms, Communication overhead is 102.27658081054688 MB
+beta = 22;Query Processing time is 4955.9 ms, Communication overhead is 117.81509399414062 MB
+beta = 25;Query Processing time is 5564.3 ms, Communication overhead is 133.35360717773438 MB
+beta = 28;Query Processing time is 6227.2 ms, Communication overhead is 148.89212036132812 MB
+Query processing with range
+range = 200;Query Processing time is 3876.2 ms, Communication overhead is 92.1412582397461 MB
+range = 400;Query Processing time is 3627.4 ms, Communication overhead is 86.65601348876953 MB
+range = 600;Query Processing time is 3639.6 ms, Communication overhead is 86.7552719116211 MB
+range = 800;Query Processing time is 3240.1 ms, Communication overhead is 76.76931762695312 MB
+range = 1000;Query Processing time is 2826.0 ms, Communication overhead is 66.48963165283203 MB
+
+
+TPSS:
+
+Outsourcing time with N
+n = 20000;Outsourcing time is 464.8 ms, Size of tree is 19.234257340431213 MB
+n = 30000;Outsourcing time is 784.9 ms, Size of tree is 33.814494490623474 MB
+n = 40000;Outsourcing time is 1189.06 ms, Size of tree is 50.551453948020935 MB
+n = 50000;Outsourcing time is 1455.2 ms, Size of tree is 59.39820349216461 MB
+n = 60000;Outsourcing time is 1720.5 ms, Size of tree is 68.81531989574432 MB
+Outsourcing time with beta
+beta = 16;Outsourcing time is812.64 ms, Size of tree is 33.814494490623474 MB
+beta = 19;Outsourcing time is892.56 ms, Size of tree is 34.12060105800629 MB
+beta = 22;Outsourcing time is962.92 ms, Size of tree is 34.4267076253891 MB
+beta = 25;Outsourcing time is1012.7 ms, Size of tree is 34.73281419277191 MB
+beta = 28;Outsourcing time is1082.04 ms, Size of tree is 35.038920760154724 MB
+Query encryption time with beta
+beta = 16; Query encryption time is 0.02 ms, Size of tree is 1536.0 B
+beta = 19; Query encryption time is 0.021 ms, Size of tree is 1824.0 B
+beta = 22; Query encryption time is 0.024 ms, Size of tree is 2112.0 B
+beta = 25; Query encryption time is 0.028 ms, Size of tree is 2400.0 B
+beta = 28; Query encryption time is 0.03 ms, Size of tree is 2688.0 B
+Query processing with N
+n = 20000;Query Processing time is 20696.2 ms, Communication overhead is 25.730224609375 MB
+n = 30000;Query Processing time is 34980.8 ms, Communication overhead is 43.48694610595703 MB
+n = 40000;Query Processing time is 52329.5 ms, Communication overhead is 65.70561218261719 MB
+n = 50000;Query Processing time is 61808.0 ms, Communication overhead is 76.51250457763672 MB
+n = 60000;Query Processing time is 76296.4 ms, Communication overhead is 92.05782318115234 MB
+Query processing with beta
+beta = 16;Query Processing time is 35846.6 ms, Communication overhead is 43.48694610595703 MB
+beta = 19;Query Processing time is 43556.5 ms, Communication overhead is 51.256202697753906 MB
+beta = 22;Query Processing time is 49185.4 ms, Communication overhead is 59.02545928955078 MB
+beta = 25;Query Processing time is 55541.0 ms, Communication overhead is 66.79471588134766 MB
+beta = 28;Query Processing time is 61662.9 ms, Communication overhead is 74.56397247314453 MB
+Query processing with range
+range = 200;Query Processing time is 39076.0 ms, Communication overhead is 46.11039733886719 MB
+range = 400;Query Processing time is 36447.7 ms, Communication overhead is 43.40489196777344 MB
+range = 600;Query Processing time is 35733.4 ms, Communication overhead is 43.504150390625 MB
+range = 800;Query Processing time is 30993.6 ms, Communication overhead is 38.54926300048828 MB
+range = 1000;Query Processing time is 26411.8 ms, Communication overhead is 33.388916015625 MB
+
+
+
+
